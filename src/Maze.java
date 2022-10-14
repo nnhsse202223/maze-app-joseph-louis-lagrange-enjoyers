@@ -4,7 +4,6 @@ public class Maze {
     private Square[][]  maze;   // somewhere as a class variable
     public Maze(){}
 
-
     public boolean loadMaze(String fname){
         return true;
     }
