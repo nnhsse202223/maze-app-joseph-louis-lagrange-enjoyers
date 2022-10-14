@@ -54,6 +54,11 @@ public class Square
         return this.col;
     }
 
+    public void reset()
+    {
+        
+    }
+
     @Override
     public String toString()
     {
