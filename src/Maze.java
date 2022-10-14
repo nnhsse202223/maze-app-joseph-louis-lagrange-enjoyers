@@ -39,7 +39,7 @@ public class Maze {
                 maze[row][col] = newSquare;
             }
         }
-        if(start == null || finish == null)
+        if(start == null || finish == null || s.hasNextInt())
         {
             return false;
         }
