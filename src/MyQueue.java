@@ -2,17 +2,23 @@ import java.util.NoSuchElementException;
 
 public class MyQueue<T> implements QueueADT<T>
 {
-    private Node first = new Node();
-    private Node last = new Node();
+    private Node first = null;
+    private Node last = null;
+
+    public MyQueue()
+    {
+        first = null;
+        last = null;
+    }
 
     @Override
     public void enqueue(T item) {
         Node newNode = new Node();
         newNode.info = item;
-        if(first.info == null)
+        if(first == null)
         {
-            first.info = item;
-            last.info = item;
+            first = newNode;
+            last = newNode;
         }
         else
         {
@@ -79,7 +85,7 @@ public class MyQueue<T> implements QueueADT<T>
 
     private class Node
     {
-        private T info = null;
-        private Node next = null;
+        private T info;
+        private Node next;
     }
 }
