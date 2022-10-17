@@ -2,11 +2,13 @@ import java.util.NoSuchElementException;
 
 public class MyQueue<T> implements QueueADT<T>
 {
+    private Node first = new Node();
+    private Node last = new Node();
 
     @Override
     public void enqueue(T item) {
-        // TODO Auto-generated method stub
-        
+        Node newNode = new Node();
+        newNode.info = item;
     }
 
     @Override
@@ -39,4 +41,9 @@ public class MyQueue<T> implements QueueADT<T>
         
     }
 
+    private class Node
+    {
+        private T info = null;
+        private Node next = null;
+    }
 }
