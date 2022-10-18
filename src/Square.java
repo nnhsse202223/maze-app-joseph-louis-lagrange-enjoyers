@@ -9,6 +9,8 @@ public class Square
     private int row;
     private int col;
 
+    private Square previous;
+
     /**
      * Constructor for objects of class Square
      * 
@@ -22,6 +24,7 @@ public class Square
         this.row = initialRow;
         this.col = initialCol;
         this.type = initialType;
+        this.previous = null;
     }
 
     /**
