@@ -10,6 +10,9 @@ public class Square
     private int col;
 
     private Square previous;
+    private boolean onPath;
+    private boolean onList;
+    private boolean explored;
 
     /**
      * Constructor for objects of class Square
@@ -25,6 +28,9 @@ public class Square
         this.col = initialCol;
         this.type = initialType;
         this.previous = null;
+        onPath = false;
+        onList = false;
+        explored = false;
     }
 
     /**
@@ -90,7 +96,18 @@ public class Square
                 break;
             }
         }
-
+        if(onList)
+        {
+            str += "o";
+        }
+        if(explored)
+        {
+            str += ".";
+        }
+        if(onPath)
+        {
+            str += "x";
+        }
         return str;
     }
 
@@ -121,5 +138,44 @@ public class Square
         return (this.row == otherSq.row) &&
                 (this.col == otherSq.col) &&
                 (this.type == otherSq.type);
+    }
+
+    public Square getPrevious()
+    {
+        return previous;
+    }
+
+    public void setPrevious(Square pre)
+    {
+        previous = pre;
+    }
+
+    public void setOnPath(boolean state)
+    {
+        onPath = state;
+    }
+
+    public void setOnList(boolean state)
+    {
+        onList = state;
+    }
+
+    public void setExplored(boolean state)
+    {
+        explored = state;
+    }
+
+    public boolean getOnPath()
+    {
+        return onPath;
+    }
+    public boolean getOnList()
+    {
+        return onList;
+    }
+
+    public boolean getExplored()
+    {
+        return explored;
     }
 }
