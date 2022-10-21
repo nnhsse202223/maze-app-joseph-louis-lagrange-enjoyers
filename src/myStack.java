@@ -1,11 +1,11 @@
 import java.util.ArrayList;
 import java.util.NoSuchElementException;
 
-public class myStack<T> implements StackADT<T>{
+public class MyStack<T> implements StackADT<T>{
     
     private ArrayList<T> list;
     
-    public myStack(){
+    public MyStack(){
         this.list = new ArrayList<>();
     }
 
@@ -51,11 +51,7 @@ public class myStack<T> implements StackADT<T>{
 
     @Override
     public int size() {
-        int count = 0;
-        for(T element : list){
-            count ++;
-        }
-        return count;
+        return list.size();
     }
 
 }

@@ -24,7 +24,7 @@ public class MyStackTest {
     public void testClear()
     {
         Stack<Integer> stack = new Stack<>();
-        myStack<Integer> stack2 = new myStack<>();
+        MyStack<Integer> stack2 = new MyStack<>();
         for(int i =0; i < 10; i++){
             stack.push(i);
             stack2.push(i);
@@ -38,7 +38,7 @@ public class MyStackTest {
     public void testPush()
     {
         Stack<Integer> stack = new Stack<>();
-        myStack<Integer> stack2 = new myStack<>();
+        MyStack<Integer> stack2 = new MyStack<>();
         for(int i =0; i < 10; i++){
             stack.push(i);
             stack2.push(i);
@@ -52,7 +52,7 @@ public class MyStackTest {
     public void testPop()
     {
         Stack<Integer> stack = new Stack<>();
-        myStack<Integer> stack2 = new myStack<>();
+        MyStack<Integer> stack2 = new MyStack<>();
         for(int i =0; i < 10; i++){
             stack.push(i);
             stack2.push(i);
@@ -64,7 +64,7 @@ public class MyStackTest {
     public void testTop()
     {
         Stack<Integer> stack = new Stack<>();
-        myStack<Integer> stack2 = new myStack<>();
+        MyStack<Integer> stack2 = new MyStack<>();
         for(int i =0; i < 10; i++){
             stack.push(i);
             stack2.push(i);
@@ -78,7 +78,7 @@ public class MyStackTest {
     public void testisEmpty()
     {
         Stack<Integer> stack = new Stack<>();
-        myStack<Integer> stack2 = new myStack<>();
+        MyStack<Integer> stack2 = new MyStack<>();
         for(int i =0; i < 10; i++){
             stack.push(i);
             stack2.push(i);
@@ -91,7 +91,7 @@ public class MyStackTest {
     public void testsize()
     {
         Stack<Integer> stack = new Stack<>();
-        myStack<Integer> stack2 = new myStack<>();
+        MyStack<Integer> stack2 = new MyStack<>();
         for(int i =0; i < 10; i++){
             stack.push(i);
             stack2.push(i);
