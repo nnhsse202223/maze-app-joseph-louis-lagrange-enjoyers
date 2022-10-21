@@ -152,17 +152,26 @@ public class Square
 
     public void setOnPath(boolean state)
     {
-        onPath = state;
+        if(type == 0)
+        {
+            onPath = state;
+        }
     }
 
     public void setOnList(boolean state)
     {
-        onList = state;
+        if(type == 0)
+        {
+            onList = state;
+        }
     }
 
     public void setExplored(boolean state)
     {
-        explored = state;
+        if(type == 0)
+        {
+            explored = state;
+        }
     }
 
     public boolean getOnPath()

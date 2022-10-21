@@ -102,22 +102,7 @@ public class Maze {
         {
             for(int col = 0; col < numCols; col++)
             {
-                if(maze[row][col].getType() == 0)
-                {
-                    sb.append("_");
-                }
-                if(maze[row][col].getType() == 1)
-                {
-                    sb.append("#");
-                }
-                if(maze[row][col].getType() == 2)
-                {
-                    sb.append("S");
-                }
-                if(maze[row][col].getType() == 3)
-                {
-                    sb.append("E");
-                }
+                sb.append(maze[row][col].toString());
             }
         }
         return new String(sb);

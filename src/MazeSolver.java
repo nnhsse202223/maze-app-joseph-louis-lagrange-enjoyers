@@ -1,4 +1,3 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public abstract class MazeSolver 
@@ -14,16 +13,16 @@ public abstract class MazeSolver
     protected Maze testMaze;
 
     private boolean solved;
-    private boolean valid;
     private Square final_Square;
     private ArrayList<int[]> path;
+    private boolean possible;
 
 
     public MazeSolver(Maze maze)
     {
+        possible = true;
         this.testMaze = maze;
         this.solved = false;
-        this.valid = false;
         this.final_Square = this.testMaze.getFinish();
         this.path = new ArrayList<>();
         this.makeEmpty();
@@ -37,9 +36,13 @@ public abstract class MazeSolver
 
     public String getPath() 
     {
-        if(!isSolved())
+        if(!solved && possible)
         {
-            return "The maze is not solved.";
+            return "The maze is not solved yet.";
+        }
+        else if(!possible)
+        {
+            return "The maze is unsolvable.";
         }
         else
         {
@@ -51,8 +54,10 @@ public abstract class MazeSolver
             {
                 int[] row_col_previous_square = {previousSquare.getRow(),previousSquare.getCol()};
                 this.path.add(row_col_previous_square);
+                stepSquare.setOnPath(true);
                 stepSquare = previousSquare;
             }
+            return path.toString();
         }
     }
 
@@ -60,19 +65,29 @@ public abstract class MazeSolver
     {
         if(isEmpty())
         {
+            solved = true;
+            possible = false;
             return null;
-            
         }
         else
         {
             Square newSquare = next();
+            newSquare.setExplored(true);
+            newSquare.setOnList(false);
             if(newSquare.getType() != 3)
             {
                 ArrayList<Square> neighbors = testMaze.getNeighbors(newSquare);
                 for(Square neighbor: neighbors)
                 {
-                    add(neighbor);
+                    if(!neighbor.getExplored() || !neighbor.getOnList())
+                    {
+                        add(neighbor);
+                    }
                 }
+            }
+            else
+            {
+                solved = true;
             }
             return newSquare;
         }
@@ -89,9 +104,8 @@ public abstract class MazeSolver
             }
             if(stepSquare.getType() == 3)
             {
-                this.solved = true;
                 System.out.println(this.getPath());
             }
         }
     }
-
+}
