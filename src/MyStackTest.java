@@ -99,4 +99,12 @@ public class MyStackTest {
 
         assertEquals(stack.size(),stack2.size());
     }
+
+
+    @Test
+    public void testSolve(){
+        //Also, for testing purposes, give both MazeSolverStack and MazeSolverQueue main( ) methods that get a maze from the command-line argument, create the appropriate type of worklist, call the solve( ) method to find a solution and then print the resulting path, if there is one.
+        
+
+    }
 }

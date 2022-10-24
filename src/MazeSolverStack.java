@@ -1,22 +1,20 @@
+
 public class MazeSolverStack extends MazeSolver {
     
     private MyStack<Square> worklist;
     
     public MazeSolverStack(Maze maze){
-        super(maze);\
-        ///TOOOO DOOOO IMPLEMENT WORKLISt
+        super(maze);
     }
 
     @Override
     public void makeEmpty() {
-        // TODO Auto-generated method stub
-        
+        this.worklist = new MyStack<>();
     }
 
     @Override
     public boolean isEmpty() {
-        // TODO Auto-generated method stub
-        return false;
+        return this.worklist.isEmpty();
     }
 
     @Override
@@ -24,12 +22,26 @@ public class MazeSolverStack extends MazeSolver {
         worklist.push(sq);
     }
         
-    }
-
     @Override
     public Square next() {
-        // TODO Auto-generated method stub
-        return null;
+        return worklist.pop();
+    }
+
+    public static void main(String[] args) {
+        /*
+         * Also, for testing purposes, give both MazeSolverStack and MazeSolverQueue main( ) methods that get a maze from the command-line argument, 
+         * create the appropriate type of worklist, call the solve( ) method to find a solution and then print the resulting path, if there is one.
+         */
+
+        Maze testmaze = new Maze();
+        testmaze.loadMaze("C:/Users/amnguyen2/Desktop/maze-app-joseph-louis-lagrange-enjoyers/src/maze-2");
+        MazeSolverStack test_solver_stack = new MazeSolverStack(testmaze);
+        test_solver_stack.solve();
+
+
+
+
+        
     }
 
 }
