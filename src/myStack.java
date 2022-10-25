@@ -11,7 +11,7 @@ public class MyStack<T> implements StackADT<T>{
 
     @Override
     public boolean isEmpty(){
-        return list == null;
+        return list.size() == 0;
     }
 
     @Override
