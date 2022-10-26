@@ -1,8 +1,5 @@
 import java.util.ArrayList;
 import java.util.NoSuchElementException;
-import java.util.Stack;
-
-import javax.lang.model.element.Element;
 
 public class myStack<T> implements StackADT<T>{
     
@@ -30,7 +27,7 @@ public class myStack<T> implements StackADT<T>{
     
     }
 
-    public ArrayList getList(){
+    public ArrayList<T> getList(){
         return this.list;
     }
 

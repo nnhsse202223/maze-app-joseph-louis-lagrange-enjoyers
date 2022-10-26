@@ -1,10 +1,7 @@
 import static org.junit.Assert.*;
-import javax.print.attribute.standard.MediaSize;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import java.io.File;
-import java.util.ArrayList;
 
 import java.util.Stack;
 
@@ -26,8 +23,8 @@ public class MyStackTest {
     @Test
     public void testClear()
     {
-        Stack stack = new Stack();
-        myStack stack2 = new myStack<>();
+        Stack<Integer> stack = new Stack<>();
+        myStack<Integer> stack2 = new myStack<>();
         for(int i =0; i < 10; i++){
             stack.push(i);
             stack2.push(i);
@@ -40,8 +37,8 @@ public class MyStackTest {
     @Test
     public void testPush()
     {
-        Stack stack = new Stack();
-        myStack stack2 = new myStack<>();
+        Stack<Integer> stack = new Stack<>();
+        myStack<Integer> stack2 = new myStack<>();
         for(int i =0; i < 10; i++){
             stack.push(i);
             stack2.push(i);
@@ -54,8 +51,8 @@ public class MyStackTest {
     @Test
     public void testPop()
     {
-        Stack stack = new Stack();
-        myStack stack2 = new myStack<>();
+        Stack<Integer> stack = new Stack<>();
+        myStack<Integer> stack2 = new myStack<>();
         for(int i =0; i < 10; i++){
             stack.push(i);
             stack2.push(i);
@@ -66,8 +63,8 @@ public class MyStackTest {
     @Test
     public void testTop()
     {
-        Stack stack = new Stack();
-        myStack stack2 = new myStack<>();
+        Stack<Integer> stack = new Stack<>();
+        myStack<Integer> stack2 = new myStack<>();
         for(int i =0; i < 10; i++){
             stack.push(i);
             stack2.push(i);
@@ -80,8 +77,8 @@ public class MyStackTest {
     @Test
     public void testisEmpty()
     {
-        Stack stack = new Stack();
-        myStack stack2 = new myStack<>();
+        Stack<Integer> stack = new Stack<>();
+        myStack<Integer> stack2 = new myStack<>();
         for(int i =0; i < 10; i++){
             stack.push(i);
             stack2.push(i);
@@ -93,8 +90,8 @@ public class MyStackTest {
     @Test
     public void testsize()
     {
-        Stack stack = new Stack();
-        myStack stack2 = new myStack<>();
+        Stack<Integer> stack = new Stack<>();
+        myStack<Integer> stack2 = new myStack<>();
         for(int i =0; i < 10; i++){
             stack.push(i);
             stack2.push(i);
