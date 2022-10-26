@@ -103,7 +103,9 @@ public class Maze {
             for(int col = 0; col < numCols; col++)
             {
                 sb.append(maze[row][col].toString());
+                sb.append("\t");
             }
+            sb.append("\n");
         }
         return new String(sb);
     }

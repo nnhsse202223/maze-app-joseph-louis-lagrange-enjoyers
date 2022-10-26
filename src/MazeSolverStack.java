@@ -34,14 +34,9 @@ public class MazeSolverStack extends MazeSolver {
          */
 
         Maze testmaze = new Maze();
-        testmaze.loadMaze("C:/Users/amnguyen2/Desktop/maze-app-joseph-louis-lagrange-enjoyers/src/maze-4");
+        testmaze.loadMaze("src/maze-4");
         MazeSolverStack test_solver_stack = new MazeSolverStack(testmaze);
         test_solver_stack.solve();
-
-
-
-
-        
     }
 
 }

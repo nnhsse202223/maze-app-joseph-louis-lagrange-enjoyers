@@ -77,7 +77,22 @@ public class Square
         {
             case Square.SPACE:
             {
-                str = "_";
+                if(onPath)
+                {
+                    str = "x";
+                }
+                if(explored)
+                {
+                    str = ".";
+                }
+                if(onList)
+                {
+                    str = "o";
+                }
+                else
+                {
+                    str  = "_";
+                }
                 break;
             }
             case Square.WALL:
@@ -95,18 +110,6 @@ public class Square
                 str = "E";
                 break;
             }
-        }
-        if(onList)
-        {
-            str += "o";
-        }
-        if(explored)
-        {
-            str += ".";
-        }
-        if(onPath)
-        {
-            str += "x";
         }
         return str;
     }

@@ -34,7 +34,7 @@ public class MazeSolverQueue extends MazeSolver
     public static void main(String[] args)
     {
         Maze testMaze = new Maze();
-        testMaze.loadMaze("C:/Users/jaqunell/maze-app-joseph-louis-lagrange-enjoyers/src/maze-2");
+        testMaze.loadMaze("src/maze-4");
         MazeSolverQueue testSolver = new MazeSolverQueue(testMaze);
         testSolver.solve();
     }
