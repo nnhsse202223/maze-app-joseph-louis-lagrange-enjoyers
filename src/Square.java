@@ -77,10 +77,7 @@ public class Square
         {
             case Square.SPACE:
             {
-                if(onPath)
-                {
-                    str = "x";
-                }
+                str = "_";
                 if(explored)
                 {
                     str = ".";
@@ -89,9 +86,9 @@ public class Square
                 {
                     str = "o";
                 }
-                else
+                if(onPath)
                 {
-                    str  = "_";
+                    str = "x";
                 }
                 break;
             }

@@ -389,6 +389,7 @@ public class MazeApp extends JFrame implements ActionListener {
 	    // update the path
 	    if (solver.isSolved()) {
 		pathDisplay.setText(solver.getPath());
+		mazeDisplay.setText(maze.toString());
 	    } else {
 		pathDisplay.setText("Maze is unsolved");
 	    }

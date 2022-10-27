@@ -89,6 +89,7 @@ public abstract class MazeSolver
                     {
                         if(!neighbor.getExplored() && !neighbor.getOnList())
                         {
+                            neighbor.setOnList(true);
                             neighbor.setPrevious(newSquare);
                             add(neighbor);
                         }
