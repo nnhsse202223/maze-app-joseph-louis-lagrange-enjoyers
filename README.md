@@ -1,6 +1,19 @@
 # Maze Lab
 
 
+
+# Reflections
+Include a reflection in which you reflect on you and your partners implementation of the GitHub best practices for team development. In addition, reflect on your teamwork. What did you and your partner do well? What do you and your partner need to improve next time? What would you do differently next time?
+
+We used the various pull requests and committed often, implementing best coding/collaboration practices. Working as a team, we were very efficient in not only pair programming, but helping each other through our individual assignments. To note, when debugging Maze Solver, we chose to double up and debug Maze Solver using a Stack implementation, which really helped to focus in on our bugs with Maze Solver. Once Maze Solver worked, we ran Queue Solver and it worked on the first try! 
+
+For next time, I think we should wireframe/write out on paper how our algorithms/code should work, because most of our issues with Maze Solver came from our code being incomplete/not doing what it should. 
+
+Overall, a really enjoyable and engaging lab!
+
+-Max and Jon
+
+
 # Purpose
 
 “In this lab you will use the power of a stack and a queue to explore and find your way through a maze. The purpose of this lab is to:
@@ -88,5 +101,7 @@ Your GitHub branching history should look similar to the following:
 [^2]:
 
      To avoid future headaches, ensure that the test thoroughly tests the Queue class. Specifically, make sure to test that the last element in the queue is successfully dequeued.
+
+
 
 
